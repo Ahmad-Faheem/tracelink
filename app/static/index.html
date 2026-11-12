@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TraceLink - Modern URL Shortener</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Animated ML Nodes Background Canvas -->
+  <canvas id="bg-nodes"></canvas>
+
+  <div class="page-container">
+    <!-- Top Header Navigation -->
+    <header class="top-nav">
+      <div class="nav-content">
+        <div class="nav-brand">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">TraceLink</span>
+        </div>
+        <button id="theme-toggle" type="button" class="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="badge-pill">✨ Instant & Secure Link Management</div>
+
+      <header class="brand">
+        <h1>TraceLink</h1>
+        <p>Paste a long address, get a short one with real-time preview support.</p>
+      </header>
+
+      <div class="shortener">
+        <label for="long-url">Long URL</label>
+        <div class="input-group">
+          <input id="long-url" type="url" placeholder="https://example.com/a/very/long/path" autocomplete="off"
+            spellcheck="false" required>
+          <button id="shorten-btn" type="button">Shorten</button>
+        </div>
+      </div>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden>
+        <div class="row">
+          <span class="k">Short link</span>
+          <a id="short-link" class="v" target="_blank" rel="noopener noreferrer"></a>
+          <button id="copy-btn" type="button" class="ghost">Copy</button>
+        </div>
+        <div class="row">
+          <span class="k">Goes to</span>
+          <span id="long-link" class="v mono"></span>
+        </div>
+        <div class="row">
+          <span class="k">Preview</span>
+          <a id="preview-link" class="v" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </section>
+
+      <!-- Content Highlights Section for desktop layout balance -->
+      <section class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🛡️</span>
+          <h3>Secure Previews</h3>
+          <p>Add <code>+</code> at the end of any short link to preview destination.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🚀</span>
+          <h3>Fast Redirection</h3>
+          <p>High-performance backend routing with instant edge delivery.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
